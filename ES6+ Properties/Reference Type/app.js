@@ -31,3 +31,18 @@ let b = "Onur Morcagok";
 
 // Reference Type bellekte adres tuttuğu/gösterdiği için içerikler aynı dahi olsa
 // adres değeri farklı olduğu için Primitive Type arasında fark vardır.
+
+const cities = new Map();
+
+const key = [1,2,3];
+
+cities.set("İstanbul",34);
+cities.set("İzmir",35);
+
+cities.set(key,"Array");
+
+console.log(cities.get("İstanbul")); // Primitive Type olduğu için bu sonucu alabiliriz.
+
+console.log(cities.get([1,2,3])); // undefined - Reference Type oldugu icin sonucu alamadık.
+
+console.log(cities.get(key));

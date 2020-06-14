@@ -1,2 +1,2 @@
 # ES6+ Properties
- JS features that come with ES6 +
+ JS features that come with ES6+

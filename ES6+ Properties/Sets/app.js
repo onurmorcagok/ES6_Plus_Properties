@@ -50,6 +50,6 @@ const mySet2 = new Set([100, 3.14, "Onur", true]);
 
 // Set'lerden Array Oluşturma
 
-const array = Array.from(mySet);
+// const array = Array.from(mySet);
 
-console.log(array);
+// console.log(array);

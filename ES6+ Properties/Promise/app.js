@@ -18,7 +18,7 @@ asyncFunction(5, function (result) {
 });
 */
 
-/*
+
 const coffeeOrder = () => {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
@@ -56,5 +56,56 @@ const prepareOrder = () => {
 }
 
 prepareOrder();
-*/
 
+
+/*
+const getUserInfo = () => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve({
+                id: 1,
+                name: "Michael",
+                surname: "Jordan"
+            })
+        }, 2000)
+    })
+}
+
+const getUserComment = (userID) => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+
+            console.log("User ID: " + userID);
+
+            const result = [{
+                    userID: 1,
+                    commentID: 1,
+                    comment: "Jordan is the best"
+                },
+                {
+                    userID: 2,
+                    commentID: 2,
+                    comment: "Air Jordan"
+                },
+                {
+                    userID: 2,
+                    commentID: 3,
+                    comment: "Jordan is the best basketball player of all time"
+                }
+            ]
+
+            const userComments = result.filter((comment) => comment.userID == userID);
+
+            resolve(userComments);
+
+        }, 1000)
+    })
+}
+
+getUserInfo().then((userInfo) => {
+
+    getUserComment(userInfo.id).then((commentsInfo) => {
+        console.log("Comments Info: " + commentsInfo);
+    })
+});
+*/
